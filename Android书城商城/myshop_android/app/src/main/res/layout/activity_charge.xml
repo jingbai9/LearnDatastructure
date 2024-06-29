@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8E8"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+
+            <ImageView
+                android:id="@+id/iv_zhifubao"
+                android:layout_width="40dp"
+                android:layout_height="44dp"
+                android:padding="7dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/svg_zhifubao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_qianbao" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_zhifubao" />
+
+
+            <ImageView
+                android:id="@+id/iv_weixin"
+                android:layout_width="40dp"
+                android:layout_height="44dp"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/svg_weixin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_zhifubao" />
+
+            <RadioGroup
+                android:id="@+id/rg_method"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_zhifubao"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <RadioButton
+                    android:id="@+id/rb_zhifubao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layoutDirection="rtl"
+                    android:minHeight="44dp"
+                    android:paddingLeft="15dp"
+                    android:checked="true"
+                    android:text="支付宝支付"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_weixin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layoutDirection="rtl"
+                    android:minHeight="44dp"
+                    android:paddingLeft="15dp"
+                    android:text="微信支付"
+                    android:textSize="15dp" />
+
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="#cc428bca"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp"
+            android:text="立即充值"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+    </LinearLayout>
+</RelativeLayout>
+
